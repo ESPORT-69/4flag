@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 4 Brother's E-Sports Tournament</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#0d1117;
+color:white;
+}
+
+header{
+background:linear-gradient(90deg,#ff4b2b,#ff416c);
+padding:30px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+header p{
+margin-top:10px;
+}
+
+.container{
+width:90%;
+max-width:900px;
+margin:auto;
+padding:30px;
+}
+
+.card{
+background:#161b22;
+padding:25px;
+border-radius:15px;
+margin-top:20px;
+box-shadow:0 0 20px rgba(255,0,80,.3);
+}
+
+input,select,textarea{
+width:100%;
+padding:15px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+background:#21262d;
+color:white;
+}
+
+label{
+display:block;
+margin-top:15px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:20px;
+background:#ff416c;
+border:none;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2b5f;
+}
+
+.fee{
+font-size:25px;
+color:#00ff99;
+margin-top:20px;
+text-align:center;
+font-weight:bold;
+}
+
+.qr{
+text-align:center;
+margin-top:20px;
+}
+
+.qr img{
+width:250px;
+border-radius:15px;
+}
+
+.success{
+display:none;
+text-align:center;
+padding:30px;
+background:#00b894;
+border-radius:10px;
+margin-top:30px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+margin-top:50px;
+background:#111;
+}
+
+.whatsapp{
+display:inline-block;
+padding:15px 30px;
+background:#25D366;
+text-decoration:none;
+color:white;
+border-radius:10px;
+margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>?? The 4 Brother's E-Sports Tournament</h1>
+
+<p>Official BGMI Tournament Registration</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Player Registration</h2>
+
+<form id="registerForm">
+
+<label>Player Name</label>
+<input type="text" required>
+
+<label>UID</label>
+<input type="text" required>
+
+<label>Contact Number</label>
+<input type="tel" required>
+
+<label>Team Name</label>
+<input type="text">
+
+<label>Select Mode</label>
+
+<select id="mode">
+
+<option value="25">Solo</option>
+
+<option value="50">Duo</option>
+
+<option value="100">Squad</option>
+
+</select>
+
+<div class="fee">
+
+Entry Fee ?<span id="price">25</span>
+
+</div>
+
+<label>Payment Screenshot</label>
+
+<input type="file">
+
+<div class="qr">
+
+<h3>Scan & Pay</h3>
+
+<!-- Replace qr.png with your QR image -->
+<img src="qr.jpg">
+
+</div>
+
+<button type="submit">
+
+Register Now
+
+</button>
+
+</form>
+
+<div class="success" id="success">
+
+<h2>? Registration Successful</h2>
+
+<p>
+
+Thank you for registering in
+
+<b>The 4 Brother's E-Sports Tournament.</b>
+
+<br><br>
+
+Your registration has been received successfully.
+
+Our team will verify your payment.
+
+Best of Luck Champion! ????
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>About Tournament</h2>
+
+<p>
+
+The 4 Brother's E-Sports Tournament is a professional FREE FIRE competition organized to provide fair gameplay, exciting matches, and a premium esports experience. Participate in Solo, Duo, or Squad mode, prove your skills, and compete with the best players. Every match is conducted with transparency and competitive spirit.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Support</h2>
+
+?? Contact: <b>8052154568</b>
+
+<br><br>
+
+<a class="whatsapp"
+
+href="https://whatsapp.com/channel/0029VbDi4Sr35fLqd7ZkhD2Z"
+
+target="_blank">
+
+Join Official WhatsApp Channel
+
+</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 The 4 Brother's E-Sports Tournament
+
+</footer>
+
+<script>
+
+let mode=document.getElementById("mode");
+
+let price=document.getElementById("price");
+
+mode.onchange=function(){
+
+price.innerHTML=mode.value;
+
+}
+
+document.getElementById("registerForm").onsubmit=function(e){
+
+e.preventDefault();
+
+document.getElementById("success").style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
